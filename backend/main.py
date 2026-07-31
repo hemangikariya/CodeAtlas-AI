@@ -8,9 +8,13 @@ from backend.app.core.config import settings
 from backend.app.core.logging import setup_logging, logger
 from backend.app.adapters.database.base import get_db
 from backend.app.api.v1 import api_router
+from backend.app.events import register_subscribers
 
 # Setup system logs
 setup_logging()
+
+# Register event subscribers
+register_subscribers()
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -64,8 +68,8 @@ async def version_info():
     Return active platform release configuration.
     """
     return {
-        "version": "0.1.0-alpha",
-        "phase": "Phase 1 - Foundation"
+        "version": "0.2.0-alpha",
+        "phase": "Phase 2 - Repository Indexing"
     }
 
 if __name__ == "__main__":

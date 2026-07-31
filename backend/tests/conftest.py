@@ -17,6 +17,10 @@ TestingSessionLocal = async_sessionmaker(
     expire_on_commit=False
 )
 
+# Override the database session maker globally for background threads during tests
+import backend.app.adapters.database.base as db_base
+db_base.AsyncSessionLocal = TestingSessionLocal
+
 # Database setup and fixtures
 
 @pytest_asyncio.fixture(scope="session", autouse=True)
