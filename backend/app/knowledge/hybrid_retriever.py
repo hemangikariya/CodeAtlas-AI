@@ -68,9 +68,13 @@ class HybridRetriever:
 
         # 4. Graph Context Expansion
         # Find graph nodes that correspond to our initial chunk_ids
+        from backend.app.adapters.models.graph_node_model import GraphNodeModel
         nodes_res = await self.db.execute(
-            select(CodeChunkModel.id)
-            .filter(CodeChunkModel.id.in_([uuid.UUID(cid) for cid in chunk_ids]))
+            select(GraphNodeModel.id)
+            .filter(
+                GraphNodeModel.snapshot_id == sid,
+                GraphNodeModel.entity_id.in_([uuid.UUID(cid) for cid in chunk_ids])
+            )
         )
         initial_node_uuids = [str(uid) for uid in nodes_res.scalars().all()]
         
