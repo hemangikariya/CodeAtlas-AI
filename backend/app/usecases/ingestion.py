@@ -235,22 +235,33 @@ class IngestRepositoryUseCase:
         return results
 
     def _resolve_dependencies(self, deps: List[Dependency], files: List[File], snapshot_id: str) -> List[Dependency]:
+        import re
         file_paths = {f.path for f in files}
         resolved = []
         
         for dep in deps:
-            # Check if the target is a relative import or module declaration matching local files
-            # For simplicity: search if dep.target name exists in local file paths
-            # e.g., if import target is "utils" and we have "app/utils.py" or "backend/utils.py"
-            # we can look for suffix substring matches
             is_internal = False
-            target_clean = dep.target.replace("import", "").replace("from", "").strip().split()[0].replace(".", "/")
             
+            # Extract target inside quotes (common in JS/TS import statements)
+            quotes_match = re.findall(r"['\"](.*?)['\"]", dep.target)
+            if quotes_match:
+                module_path = quotes_match[0]
+            else:
+                # Python imports: e.g. "from app.models import User" -> target is "app.models"
+                target_clean = dep.target.replace("import", "").replace("from", "").strip()
+                module_path = target_clean.split()[0] if target_clean else dep.target
+
+            # Normalize relative path structures
+            module_path_clean = module_path.lstrip("./").lstrip("../").replace(".", "/")
+            if module_path_clean.endswith("/py"):
+                module_path_clean = module_path_clean[:-3] + ".py"
+            elif module_path_clean.endswith("/js"):
+                module_path_clean = module_path_clean[:-3] + ".js"
+
             for path in file_paths:
-                # check if path contains target package structure
-                if target_clean in path:
+                # Check for substring match (e.g. "math_utils" in "math_utils.py")
+                if module_path_clean in path or path.endswith(module_path_clean) or path.startswith(module_path_clean):
                     is_internal = True
-                    # Update dependency target with exact matching path
                     dep.target = path
                     break
                     

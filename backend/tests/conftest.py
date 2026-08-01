@@ -1,3 +1,6 @@
+import os
+os.environ["ENVIRONMENT"] = "testing"
+
 import asyncio
 import pytest
 import pytest_asyncio
