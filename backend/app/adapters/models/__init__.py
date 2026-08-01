@@ -8,6 +8,10 @@ from backend.app.adapters.models.file_model import FileModel
 from backend.app.adapters.models.code_chunk_model import CodeChunkModel
 from backend.app.adapters.models.dependency_model import DependencyModel
 from backend.app.adapters.models.detected_language_model import DetectedLanguageModel
+from backend.app.adapters.models.embedding_model import EmbeddingModel
+from backend.app.adapters.models.graph_node_model import GraphNodeModel
+from backend.app.adapters.models.graph_edge_model import GraphEdgeModel
+from backend.app.adapters.models.retrieval_cache_model import RetrievalCacheModel
 
 __all__ = [
     "Base",
@@ -19,5 +23,9 @@ __all__ = [
     "FileModel",
     "CodeChunkModel",
     "DependencyModel",
-    "DetectedLanguageModel"
+    "DetectedLanguageModel",
+    "EmbeddingModel",
+    "GraphNodeModel",
+    "GraphEdgeModel",
+    "RetrievalCacheModel"
 ]

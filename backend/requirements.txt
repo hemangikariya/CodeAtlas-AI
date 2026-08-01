@@ -21,3 +21,5 @@ tree-sitter-python>=0.21.0
 tree-sitter-javascript>=0.21.0
 tree-sitter-typescript>=0.21.0
 gitpython>=3.1.43
+sentence-transformers>=2.2.2
+pgvector>=0.2.0
