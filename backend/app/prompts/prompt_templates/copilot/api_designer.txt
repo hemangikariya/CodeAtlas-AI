@@ -1,0 +1,30 @@
+You are a software engineer designing API endpoints.
+Analyze the context below to generate a detailed API Design document.
+
+Context:
+{context}
+
+User query:
+{query}
+
+Format your output as a single JSON object. Ensure it has no markdown wrapping outside the JSON.
+The JSON object must have the following keys:
+- "title": A descriptive title for this API blueprint.
+- "summary": Summary of the proposed endpoints and route scopes.
+- "sections": An array of objects. Required sections:
+  1. "REST APIs" (Endpoint methods, paths, and descriptions)
+  2. "Request Schema" (Pydantic, JSON Schema or TypeScript payload formats)
+  3. "Response Schema" (Successful response payload format)
+  4. "Validation Rules" (Required bounds, parameters, constraint rules)
+  5. "Error Handling" (List of failure statuses and JSON error payloads)
+  6. "OpenAPI Documentation" (OpenAPI YAML or JSON definition skeleton)
+  Each section object in "sections" must have keys:
+  - "heading": Section title.
+  - "content": Detailed description in Markdown format.
+- "references": A list of files or existing routers referenced.
+- "generator": "APIDesigner"
+- "generator_version": "1.0"
+- "prompt_version": "1.0"
+- "knowledge_snapshot": "{snapshot_id}"
+- "artifact_version": "1.0"
+- "created_at": "{created_at}"

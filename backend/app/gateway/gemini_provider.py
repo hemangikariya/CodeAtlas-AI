@@ -231,6 +231,30 @@ class GeminiProvider(BaseProvider):
                 "sanitized_output": "Sanitized content here."
             }
         
+        # 4. Copilot Structured Artifact schema
+        elif "sections" in props:
+            mock_data = {
+                "title": "Mocked Copilot Engineering Artifact",
+                "summary": "This is a mocked high-fidelity engineering document output.",
+                "sections": [
+                    {
+                        "heading": "Introduction",
+                        "content": "This is a detailed analysis section from the CodeAtlas Copilot."
+                    },
+                    {
+                        "heading": "Core Analysis Details",
+                        "content": "Specific observations, component interactions, and file audits."
+                    }
+                ],
+                "references": ["math_utils.py", "main.py"],
+                "generator": "RepositoryExplainer",
+                "generator_version": "1.0",
+                "prompt_version": "1.0",
+                "knowledge_snapshot": "snap-123",
+                "artifact_version": "1.0",
+                "created_at": "2026-08-03T12:00:00Z"
+            }
+        
         # 4. Standard properties fallback
         else:
             mock_data = {}

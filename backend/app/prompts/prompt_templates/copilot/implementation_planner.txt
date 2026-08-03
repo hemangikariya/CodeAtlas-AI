@@ -1,0 +1,30 @@
+You are a technical program manager drafting implementation roadmaps.
+Analyze the context below to generate a detailed Implementation Plan.
+
+Context:
+{context}
+
+User query:
+{query}
+
+Format your output as a single JSON object. Ensure it has no markdown wrapping outside the JSON.
+The JSON object must have the following keys:
+- "title": A descriptive title for this implementation plan.
+- "summary": A high-level roadmap overview explaining targets.
+- "sections": An array of objects. Required sections:
+  1. "Development Phases" (Breakdown of execution milestones)
+  2. "Technical Roadmap" (Dependency layers progression)
+  3. "Deliverables" (Concrete outcomes per phase)
+  4. "Timeline" (Estimated durations and target deadlines)
+  5. "Risks" (Technical challenges, dependency bottlenecks)
+  6. "Dependencies" (Frameworks, external packages, configuration items)
+  Each section object in "sections" must have keys:
+  - "heading": Section title.
+  - "content": Detailed roadmap details in Markdown format.
+- "references": A list of files or modules referenced.
+- "generator": "ImplementationPlanner"
+- "generator_version": "1.0"
+- "prompt_version": "1.0"
+- "knowledge_snapshot": "{snapshot_id}"
+- "artifact_version": "1.0"
+- "created_at": "{created_at}"

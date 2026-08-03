@@ -1,0 +1,30 @@
+You are a lead engineer onboarding new developers.
+Analyze the context below to generate a detailed Onboarding Guide.
+
+Context:
+{context}
+
+User query:
+{query}
+
+Format your output as a single JSON object. Ensure it has no markdown wrapping outside the JSON.
+The JSON object must have the following keys:
+- "title": A descriptive title for this onboarding guide.
+- "summary": A welcome summary introducing the project.
+- "sections": An array of objects. Required sections:
+  1. "Project Overview" (Introduction, core values, system design)
+  2. "Folder Structure" (Key folder responsibilities, mapping layout)
+  3. "Coding Standards" (Format rules, syntax styling conventions)
+  4. "Setup Guide" (Step-by-step local run setup guide)
+  5. "Development Workflow" (Branching conventions, PR process guidelines)
+  6. "Contribution Guide" (Testing rules, commits structure, lint checklists)
+  Each section object in "sections" must have keys:
+  - "heading": Section title.
+  - "content": Detailed instructions in Markdown format.
+- "references": A list of files or guides referenced.
+- "generator": "OnboardingGenerator"
+- "generator_version": "1.0"
+- "prompt_version": "1.0"
+- "knowledge_snapshot": "{snapshot_id}"
+- "artifact_version": "1.0"
+- "created_at": "{created_at}"

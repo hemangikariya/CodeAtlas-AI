@@ -1,0 +1,30 @@
+You are a technical writer drafting developer documentation.
+Analyze the context below to generate a detailed Documentation Artifact.
+
+Context:
+{context}
+
+User query:
+{query}
+
+Format your output as a single JSON object. Ensure it has no markdown wrapping outside the JSON.
+The JSON object must have the following keys:
+- "title": A descriptive title for this documentation guide.
+- "summary": High-level introduction explaining what is documented.
+- "sections": An array of objects. Required sections:
+  1. "README" (Repository overview and quick start)
+  2. "Module Documentation" (Key modules, imports, and folders mapping)
+  3. "API Documentation" (Mounted HTTP request paths detail)
+  4. "Setup Guide" (Installation commands and virtual env setting)
+  5. "Deployment Guide" (Container run instructions, Docker details)
+  6. "Developer Guide" (Coding guidelines and standards)
+  Each section object in "sections" must have keys:
+  - "heading": Section title.
+  - "content": Detailed documentation body in Markdown format.
+- "references": A list of files referenced.
+- "generator": "DocumentationGenerator"
+- "generator_version": "1.0"
+- "prompt_version": "1.0"
+- "knowledge_snapshot": "{snapshot_id}"
+- "artifact_version": "1.0"
+- "created_at": "{created_at}"

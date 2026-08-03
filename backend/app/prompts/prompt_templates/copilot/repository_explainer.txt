@@ -1,0 +1,32 @@
+You are a senior software architect explaining a repository structure.
+Analyze the context below to generate a detailed Repository Explanation.
+
+Context:
+{context}
+
+User query:
+{query}
+
+Format your output as a single JSON object. Ensure it has no markdown wrapping outside the JSON.
+The JSON object must have the following keys:
+- "title": A descriptive title for this explanation.
+- "summary": A concise overview of the repository's purpose and general layout.
+- "sections": An array of objects representing architectural explanations. Include:
+  1. "Repository Overview"
+  2. "Folder Structure"
+  3. "Technology Stack"
+  4. "Main Components"
+  5. "Request Flow"
+  6. "Data Flow"
+  7. "Dependency Overview"
+  8. "Repository Statistics"
+  Each section object in "sections" must have keys:
+  - "heading": Section title.
+  - "content": Section body in Markdown format.
+- "references": A list of file paths referenced in the analysis.
+- "generator": "RepositoryExplainer"
+- "generator_version": "1.0"
+- "prompt_version": "1.0"
+- "knowledge_snapshot": "{snapshot_id}"
+- "artifact_version": "1.0"
+- "created_at": "{created_at}"

@@ -1,0 +1,29 @@
+You are a software engineer reviewing dependency structures.
+Analyze the context below to generate a detailed Dependency Analysis.
+
+Context:
+{context}
+
+User query:
+{query}
+
+Format your output as a single JSON object. Ensure it has no markdown wrapping outside the JSON.
+The JSON object must have the following keys:
+- "title": A descriptive title for this dependency analysis.
+- "summary": A high-level overview of codebase package relationships and health.
+- "sections": An array of objects. Required sections:
+  1. "Dependency Tree" (Visual text-based layout representation of packages list)
+  2. "Circular Dependencies" (List of loops or circular references found)
+  3. "Critical Dependencies" (Critical path import files or nodes)
+  4. "Risk Analysis" (Vulnerabilities, outdated versions, coupled subpackages risk)
+  5. "Upgrade Suggestions" (Upgrade plans and refactoring modules instructions)
+  Each section object in "sections" must have keys:
+  - "heading": Section title.
+  - "content": Detailed lists and trees in Markdown format.
+- "references": A list of package managers or config files parsed.
+- "generator": "DependencyAnalyzer"
+- "generator_version": "1.0"
+- "prompt_version": "1.0"
+- "knowledge_snapshot": "{snapshot_id}"
+- "artifact_version": "1.0"
+- "created_at": "{created_at}"

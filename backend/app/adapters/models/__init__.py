@@ -12,6 +12,7 @@ from backend.app.adapters.models.embedding_model import EmbeddingModel
 from backend.app.adapters.models.graph_node_model import GraphNodeModel
 from backend.app.adapters.models.graph_edge_model import GraphEdgeModel
 from backend.app.adapters.models.retrieval_cache_model import RetrievalCacheModel
+from backend.app.adapters.models.generated_artifact_model import GeneratedArtifactModel
 
 __all__ = [
     "Base",
@@ -27,5 +28,6 @@ __all__ = [
     "EmbeddingModel",
     "GraphNodeModel",
     "GraphEdgeModel",
-    "RetrievalCacheModel"
+    "RetrievalCacheModel",
+    "GeneratedArtifactModel"
 ]
