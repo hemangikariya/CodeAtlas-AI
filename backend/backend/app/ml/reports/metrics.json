@@ -1,0 +1,75 @@
+{
+  "maintainability": {
+    "metadata": {
+      "algorithm": "Random Forest Regressor",
+      "dataset": "Synthetic Seed v1 (150 samples)",
+      "feature_version": "1.0",
+      "accuracy": 0.9354645132603561,
+      "notes": "Predicts maintainability index using structural LOC and code smell ratios."
+    },
+    "metrics": {
+      "mae": 2.6920943273551647,
+      "mse": 13.96795173399879,
+      "rmse": 3.7373723033702153,
+      "r2": 0.9354645132603561
+    }
+  },
+  "bug_risk": {
+    "metadata": {
+      "algorithm": "Random Forest Classifier",
+      "dataset": "Synthetic Seed v1 (150 samples)",
+      "feature_version": "1.0",
+      "accuracy": 0.7391304347826086,
+      "precision": 0.7,
+      "recall": 1.0,
+      "f1": 0.8235294117647058,
+      "notes": "Predicts high vs low bug risk based on code smells and circular import paths."
+    },
+    "metrics": {
+      "accuracy": 0.7391304347826086,
+      "precision": 0.7,
+      "recall": 1.0,
+      "f1": 0.8235294117647058,
+      "confusion_matrix": [
+        [
+          3,
+          6
+        ],
+        [
+          0,
+          14
+        ]
+      ]
+    }
+  },
+  "complexity": {
+    "metadata": {
+      "algorithm": "Random Forest Regressor",
+      "dataset": "Synthetic Seed v1 (150 samples)",
+      "feature_version": "1.0",
+      "accuracy": 0.7023182081744984,
+      "notes": "Predicts cyclomatic and logical code complexity indices."
+    },
+    "metrics": {
+      "mae": 9.316443881845476,
+      "mse": 133.73270999449852,
+      "rmse": 11.564285969937725,
+      "r2": 0.7023182081744984
+    }
+  },
+  "repository_health": {
+    "metadata": {
+      "algorithm": "Random Forest Regressor",
+      "dataset": "Synthetic Seed v1 (150 samples)",
+      "feature_version": "1.0",
+      "accuracy": 0.5839359188156423,
+      "notes": "Aggregate repository health index combining maintainability and complexity metrics."
+    },
+    "metrics": {
+      "mae": 5.829775491010329,
+      "mse": 51.974324293247925,
+      "rmse": 7.209322041166418,
+      "r2": 0.5839359188156423
+    }
+  }
+}

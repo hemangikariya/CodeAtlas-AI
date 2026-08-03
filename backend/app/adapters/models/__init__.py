@@ -13,6 +13,8 @@ from backend.app.adapters.models.graph_node_model import GraphNodeModel
 from backend.app.adapters.models.graph_edge_model import GraphEdgeModel
 from backend.app.adapters.models.retrieval_cache_model import RetrievalCacheModel
 from backend.app.adapters.models.generated_artifact_model import GeneratedArtifactModel
+from backend.app.adapters.models.trained_model_model import TrainedModelModel
+from backend.app.adapters.models.prediction_history_model import PredictionHistoryModel
 
 __all__ = [
     "Base",
@@ -29,5 +31,7 @@ __all__ = [
     "GraphNodeModel",
     "GraphEdgeModel",
     "RetrievalCacheModel",
-    "GeneratedArtifactModel"
+    "GeneratedArtifactModel",
+    "TrainedModelModel",
+    "PredictionHistoryModel"
 ]

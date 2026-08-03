@@ -1,0 +1,13 @@
+{
+  "model_name": "bug-risk",
+  "version": "v1",
+  "created_at": "2026-08-03T16:47:20.813203Z",
+  "algorithm": "Random Forest Classifier",
+  "dataset": "Synthetic Seed v1 (150 samples)",
+  "feature_version": "1.0",
+  "accuracy": 0.7391304347826086,
+  "precision": 0.7,
+  "recall": 1.0,
+  "f1": 0.8235294117647058,
+  "notes": "Predicts high vs low bug risk based on code smells and circular import paths."
+}

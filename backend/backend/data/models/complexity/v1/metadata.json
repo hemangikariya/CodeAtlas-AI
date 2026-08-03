@@ -1,0 +1,10 @@
+{
+  "model_name": "complexity",
+  "version": "v1",
+  "created_at": "2026-08-03T16:47:21.570034Z",
+  "algorithm": "Random Forest Regressor",
+  "dataset": "Synthetic Seed v1 (150 samples)",
+  "feature_version": "1.0",
+  "accuracy": 0.7023182081744984,
+  "notes": "Predicts cyclomatic and logical code complexity indices."
+}

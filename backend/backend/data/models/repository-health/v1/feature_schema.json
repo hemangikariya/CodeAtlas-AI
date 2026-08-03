@@ -1,0 +1,31 @@
+{
+  "features": [
+    "total_files",
+    "total_classes",
+    "total_functions",
+    "lines_of_code",
+    "avg_func_len",
+    "avg_class_size",
+    "comment_ratio",
+    "folder_depth",
+    "import_count",
+    "dependency_count",
+    "pct_python",
+    "pct_javascript",
+    "pct_typescript",
+    "pct_other",
+    "graph_nodes",
+    "graph_edges",
+    "graph_density",
+    "avg_graph_degree",
+    "connected_components",
+    "graph_centrality",
+    "dependency_density",
+    "cyclomatic_complexity",
+    "long_methods",
+    "large_classes",
+    "dead_code",
+    "duplicate_code",
+    "code_smells"
+  ]
+}
